@@ -1,0 +1,18 @@
+ffi jsFfi
+allow url /*
+database dbname=crossword
+sql crossword.sql
+script http://localhost/crossword/crossword.js
+prefix http://localhost:8080
+jsFunc JsFfi.draw=uw_draw
+jsFunc JsFfi.registerFfi=registerFfi
+jsFunc JsFfi.registerFfi2=registerFfi
+jsFunc JsFfi.init=init
+effectful JsFfi.draw
+effectful JsFfi.registerFfi
+effectful JsFfi.registerFfi2
+effectful JsFfi.init
+
+$/monad
+$/list
+crossword
